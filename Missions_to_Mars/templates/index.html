@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="heading"><strong>Latest Mars News</strong></h2>
+            <h3 class="heading"> {{marsinfo.news_title}}</h3>
+            <p>{{marsinfo.news_p}}</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="heading"><strong>Featured Mars Image</strong></h1>
+                <img src={{marsinfo.featured_image}} class="img-fluid" alt="Image">
+            </div>
+            <div class="col-md-4">
+                <h4>Mars Facts</h4>
+               <hr size=2>
+               <table border="1" class="dataframe">
+                {{marsinfo.mars_table|safe}}
+               </table>  
+            </div>   
+        </div> 
+            
+        <div class="row">
+            <h1 class="heading text-center"><strong>Mars Hemisphere</strong></h2>
+            <div class="col-md-3">
+                <div class="col-md-12">         
+                        <img class = "img-thumbnail" src={{marsinfo.cerberus_img_url}} alt="hemisphere" style="width:50%;">
+                        <div class="caption"style="font-weight: bold;">
+                            {{marsinfo.cerberus_title}}
+                        </div>  
+                    </div>
+                </div>  
+                <div class="col-md-3">
+                    <div class="col-md-12">         
+                         <img class = "img-thumbnail" src={{marsinfo.schiaparelli_img_url}} alt="hemisphere" style="width:50%;">
+                        <div class="caption"style="font-weight: bold;">
+                            {{marsinfo.schiaparelli_title}}
+                        </div> 
+                    </div>             
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12">         
+                         <img class = "img-thumbnail" src={{marsinfo.syrtis_major_img_url}} alt="hemisphere" style="width:50%;">
+                        <div class="caption"style="font-weight: bold;">
+                            {{marsinfo.syrtis_major_title}}
+                        </div> 
+                    </div>             
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12">         
+                         <img class = "img-thumbnail" src={{marsinfo.valles_marineris_img_url}} alt="hemisphere" style="width:50%;">
+                        <div class="caption"style="font-weight: bold;">
+                            {{marsinfo.valles_marineris_title}}
+                        </div> 
+                    </div>             
+                </div>
+                </div>
+                </div>
+                </div>                         
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
+
+
